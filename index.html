@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vault Safe — secure home for your projects</title>
+<meta name="description" content="Vault Safe keeps each project's credentials, API keys, key files, app builds and links encrypted in one place, and backs up your folders to your own Google Drive every week.">
+<meta name="google-site-verification" content="6050eJxkn7kLBPFxbfFtJ2_ZSHIaY4RsYB4jAtKrsZk" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/logo.svg" alt="" width="34" height="34">Vault Safe</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#security">Security</a>
+      <a href="#google">Google Drive</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Vault Safe</h1>
+        <p class="lead" style="font-size:24px;color:var(--ink);margin-bottom:12px">Every project's secrets, files and backups in one encrypted place.</p>
+        <p class="lead">Vault Safe keeps credentials, API keys, signing keys, app builds and links organised by project, and backs up your folders to your own Google Drive every week. Everything sensitive is encrypted on your device before it is uploaded.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#security">How your data is protected</a>
+          <a class="btn btn-ghost" href="privacy.html">Privacy policy</a>
+        </div>
+      </div>
+      <div class="hero-art"><img src="assets/icon-512.png" alt="Vault Safe logo: a shield holding a folder with a keyhole" width="512" height="512"></div>
+    </div>
+  </section>
+
+  <section class="block" id="features">
+    <div class="wrap">
+      <h2>What it does</h2>
+      <p class="sub">One app on Windows, macOS, Linux, Android, iOS and the web, showing the same data everywhere.</p>
+      <div class="grid">
+        <div class="card"><h3>Credentials and consoles</h3><p>Logins for servers, clients and consoles such as Firebase, Play Console, App Store Connect and AWS, with a password generator.</p></div>
+        <div class="card"><h3>API keys and .env files</h3><p>Keys per environment (development, staging, production). Import a .env file, copy one value, or save it back as a file.</p></div>
+        <div class="card"><h3>Key files and builds</h3><p>Keystores, google-services.json, certificates and SSH keys with their passwords, plus APK, AAB and IPA builds with version labels.</p></div>
+        <div class="card"><h3>Links and notes</h3><p>Google Docs, Sheets and other links, secure notes, files up to 50 MB, and searchable Chrome bookmarks exports.</p></div>
+        <div class="card"><h3>Weekly folder backups</h3><p>The desktop app backs up chosen folders to your Google Drive, uploading only new and changed files and keeping five versions of each.</p></div>
+        <div class="card"><h3>Search and live sync</h3><p>Search every project at once. A change on one device appears on your other devices within about a second.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="security">
+    <div class="wrap narrow">
+      <h2>How your data is protected</h2>
+      <p class="sub">Your master password never leaves your device, so the services that store your data cannot read it.</p>
+      <ol class="steps">
+        <li><div><strong>A key made on your device</strong><span>Your master password is turned into a 256-bit key with Argon2id. The key stays in memory on your device.</span></div></li>
+        <li><div><strong>Encrypted before upload</strong><span>Passwords, API keys, notes, uploaded files and backed-up files (including their names) are encrypted with AES-256-GCM before they leave your device.</span></div></li>
+        <li><div><strong>Stored as locked data</strong><span>The app's database and your Google Drive only ever receive encrypted data for those items. Without your master password nobody can open them, including us.</span></div></li>
+      </ol>
+      <p class="note" style="margin-top:24px">Item titles, tags and link addresses are stored without encryption so they can be searched. Keep secrets out of titles. The master password cannot be reset or recovered.</p>
+    </div>
+  </section>
+
+  <section class="block" id="google">
+    <div class="wrap narrow">
+      <h2>How Vault Safe uses Google Drive</h2>
+      <p class="sub">Google Drive is optional and is used only for the weekly backup feature of the desktop app.</p>
+      <ul>
+        <li>The app asks for the <strong>drive.file</strong> permission, which lets it see and manage only the files it creates itself. It cannot see any other file in your Drive.</li>
+        <li>It creates a folder called "Vault Safe Backups" and stores your encrypted backup files there. It reads them back only when you restore.</li>
+        <li>Your Google sign-in is kept in your device's secure storage (Windows Credential Manager, macOS Keychain or the Linux secret service). It is not sent to our servers.</li>
+        <li>We do not sell Google user data, show ads, or use it to train AI models. Use of information received from Google APIs follows the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</li>
+        <li>You can disconnect at any time in the app (Backups → Disconnect) or at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+      </ul>
+      <p>Full details are in the <a href="privacy.html">privacy policy</a>.</p>
+    </div>
+  </section>
+
+  <section class="block" id="contact">
+    <div class="wrap narrow">
+      <h2>Contact</h2>
+      <p>Vault Safe is a personal project by Rajshree Pindolia, Bhuj, Kutch, Gujarat, India. For questions, data requests or support, email <a href="mailto:pindoliaraji@gmail.com">pindoliaraji@gmail.com</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Rajshree Pindolia · Vault Safe</span>
+    <nav aria-label="Legal">
+      <a href="privacy.html">Privacy policy</a>
+      <a href="terms.html">Terms of service</a>
+      <a href="mailto:pindoliaraji@gmail.com">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
